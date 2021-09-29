@@ -90,8 +90,8 @@ void runBFFile(){
 				else r_ptr++;
 				break;
 			}
-			case ' ':break;
-			case '\n':break;
+			case ' ':r_ptr++;break;
+			case '\n':r_ptr++;break;
 			default:{
 				printf("BF Interpreter: Invalid Character \'%c\' at column %d.",buffer[r_ptr],r_ptr+1);
 				exit(-1);
@@ -216,8 +216,8 @@ int main()\n\
 				tabs--;
 				break;
 			}
-			case ' ':break;
-			case '\n':break;
+			case ' ':r_ptr++;break;
+			case '\n':r_ptr++;break;
 			default:{
 				printf("BF Interpreter: Invalid Character \'%c\' at column %d.",buffer[r_ptr],r_ptr+1);
 				exit(-1);
